@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/12/31/hello-world/</loc>
-    <lastmod>2017-12-30T19:17:05.749Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-12-30T17:19:19.225Z</pubTime>
-        
-        <tag>test</tag>
-         
-        <tag>测试</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://yoursite.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/12/31/java_attetion/</loc>
-    <lastmod>2017-12-30T19:13:46.000Z</lastmod>
+    <lastmod>2017-12-30T19:25:51.033Z</lastmod>
     <data>
         <display>
         <title>Java学习的注意事项</title>
@@ -43,6 +21,28 @@
            
              
               <breadCrumb title="Java" url="http://yoursite.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/31/hello-world/</loc>
+    <lastmod>2017-12-30T19:17:05.749Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-12-30T17:19:19.225Z</pubTime>
+        
+        <tag>test</tag>
+         
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="test" url="http://yoursite.com/categories/test/"/>
           
         </display>
     </data>
