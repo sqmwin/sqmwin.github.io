@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-30T19:25:51.033Z</updated>
+  <updated>2017-12-30T19:28:10.193Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,23 +21,15 @@
     <link href="http://yoursite.com/2017/12/31/java_attetion/"/>
     <id>http://yoursite.com/2017/12/31/java_attetion/</id>
     <published>2017-12-30T19:13:46.000Z</published>
-    <updated>2017-12-30T19:25:51.033Z</updated>
+    <updated>2017-12-30T19:28:10.193Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;[TOC]&lt;/p&gt;
-&lt;hr&gt;
+      &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;1-学习技术的三部曲-WHAT-HOW-WHY&quot;&gt;&lt;a href=&quot;#1-学习技术的三部曲-WHAT-HOW-WHY&quot; class=&quot;headerlink&quot; title=&quot;1. 学习技术的三部曲:WHAT,HOW,WHY&quot;&gt;&lt;/a&gt;1. 学习技术的三部曲:WHAT,HOW,WHY&lt;/h1&gt;&lt;p&gt;　　最近几天有些网友在邮件里面问我关于学习的问题。有好几个人觉得工作了几年，也学会了不少的类库、框架、甚至语言，但是感觉自己的能力没有太大的提高。因此今天来说一下我个人对这方面的体会，希望对大伙儿（尤其是新手）有帮助。&lt;/p&gt;
 &lt;p&gt;　　先声明一下，本帖子讨论的三部曲是指你已经选定了某个技术方向之后，该如何学习；至于如何选定技术方向，则属于另一个话题，不在今天的讨论之列。&lt;/p&gt;
 &lt;p&gt;　　我把学习归类为三个步骤：What、How、Why。经过我对周围同事和朋友的观察，大部分感觉自己技术没有提高的人，都仅仅停留在What阶段。下面我把这三个步骤解释一下。&lt;/p&gt;
-&lt;h2 id=&quot;第一步：WHAT&quot;&gt;&lt;a href=&quot;#第一步：WHAT&quot; class=&quot;headerlink&quot; title=&quot;第一步：WHAT&quot;&gt;&lt;/a&gt;第一步：WHAT&lt;/h2&gt;&lt;p&gt;　　所谓的“WHAT”也就是“What is it?”——这是最简单的层次。在这个层次，你要搞清楚某个东东是【什么】样子的？有【什么】用处？有【什么】特性？有【什么】语法？……&lt;/p&gt;
-&lt;p&gt;　　举例如下：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于学习语言（比如 C++、Java、Python），大部分人都能够掌握基本的语法和标准库，然后用它写一些小程序（诸如二分查找、冒泡排序、简单文件操作等）。&lt;br&gt;对于学习类库（比如 JDBC 类库），大部分 Java 程序员都能明白 JDBC 主要包含哪些类，也能够用 JDBC 进行简单的数据库查询和增删改操作。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;　　由于这个步骤是最基本的，假如你连这都做不到（可能你的理解力不够好），也别在IT界混了。&lt;/p&gt;
-&lt;p&gt;　　但是光会 What 是不够的。仅仅停留在这个步骤，导致了很多程序员【只知其然，不知其所以然】。这就是目前大部分开发人员的现状。&lt;/p&gt;
     
     </summary>
     
