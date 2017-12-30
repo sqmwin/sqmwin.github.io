@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-30T18:01:53.037Z</updated>
+  <updated>2017-12-30T19:13:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,104 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java学习的注意事项</title>
+    <link href="http://yoursite.com/2017/12/31/java_attetion/"/>
+    <id>http://yoursite.com/2017/12/31/java_attetion/</id>
+    <published>2017-12-30T19:13:46.000Z</published>
+    <updated>2017-12-30T19:13:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0-学习技术的三部曲-WHAT-HOW-WHY&quot;&gt;&lt;a href=&quot;#0-学习技术的三部曲-WHAT-HOW-WHY&quot; class=&quot;headerlink&quot; title=&quot;0.
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="学习技巧" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="二八原理" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%85%AB%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/12/31/hello-world/"/>
     <id>http://yoursite.com/2017/12/31/hello-world/</id>
     <published>2017-12-30T17:19:19.225Z</published>
-    <updated>2017-12-30T18:01:53.037Z</updated>
+    <updated>2017-12-30T19:17:05.749Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+      &lt;h2 id=&quot;文章的YAML属性&quot;&gt;&lt;a href=&quot;#文章的YAML属性&quot; class=&quot;headerlink&quot; title=&quot;文章的YAML属性&quot;&gt;&lt;/a&gt;文章的YAML属性&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;th&gt;default&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;layout&lt;/td&gt;
+&lt;td&gt;Layout&lt;/td&gt;
+&lt;td&gt;post(文章)或者page(页面)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;创建日期&lt;/td&gt;
+&lt;td&gt;创建日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated&lt;/td&gt;
+&lt;td&gt;修改日期&lt;/td&gt;
+&lt;td&gt;文件修改日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;comments&lt;/td&gt;
+&lt;td&gt;是否开启评论&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tags&lt;/td&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;每一个标签占一行 以 - 开头&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;categories&lt;/td&gt;
+&lt;td&gt;分类&lt;/td&gt;
+&lt;td&gt;同上,不过只建议分到一个类中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;permalink&lt;/td&gt;
+&lt;td&gt;url中的名字(建议设置成英文)&lt;/td&gt;
+&lt;td&gt;文件名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;copyright&lt;/td&gt;
+&lt;td&gt;自行设置的版权信息&lt;/td&gt;
+&lt;td&gt;true or false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;用在文章中,起到”阅读全文”的效果&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
     
