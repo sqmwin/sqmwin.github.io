@@ -31,6 +31,12 @@
     
     </summary>
     
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
