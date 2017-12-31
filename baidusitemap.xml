@@ -18,29 +18,7 @@
          
            
              
-              <breadCrumb title="Java" url="https://sqmwin.github.io/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-2/</loc>
-    <lastmod>2017-12-31T11:34:29.695Z</lastmod>
-    <data>
-        <display>
-        <title>Java新手的通病</title>
-        <pubTime>2017-12-31T11:19:46.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>学习技巧</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://sqmwin.github.io/categories/Java/"/>
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
           
         </display>
     </data>
@@ -62,7 +40,29 @@
          
            
              
-              <breadCrumb title="Java" url="https://sqmwin.github.io/categories/Java/"/>
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-2/</loc>
+    <lastmod>2017-12-31T11:34:29.695Z</lastmod>
+    <data>
+        <display>
+        <title>Java新手的通病</title>
+        <pubTime>2017-12-31T11:19:46.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>学习技巧</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
           
         </display>
     </data>
@@ -86,7 +86,7 @@
          
            
              
-              <breadCrumb title="Java" url="https://sqmwin.github.io/categories/Java/"/>
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
           
         </display>
     </data>
@@ -108,7 +108,7 @@
          
            
              
-              <breadCrumb title="Java" url="https://sqmwin.github.io/categories/Java/"/>
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
           
         </display>
     </data>
@@ -142,7 +142,7 @@
     <lastmod>2017-12-31T11:34:05.361Z</lastmod>
     <data>
         <display>
-        <title>next更换背景图片或背景颜色</title>
+        <title>Next更换背景图片或背景颜色</title>
         <pubTime>2017-12-31T07:23:46.000Z</pubTime>
         
         <tag>Hexo</tag>
@@ -154,7 +154,7 @@
          
            
              
-              <breadCrumb title="Blog" url="https://sqmwin.github.io/categories/Blog/"/>
+              <breadCrumb title="Next" url="https://sqmwin.github.io/categories/Next/"/>
           
         </display>
     </data>

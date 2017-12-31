@@ -374,7 +374,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/31/next-background-image/" itemprop="url">next更换背景图片或背景颜色</a></h2>
+                <a class="post-title-link" href="/2017/12/31/next-background-image/" itemprop="url">Next更换背景图片或背景颜色</a></h2>
         
 
         <div class="post-meta">
@@ -409,8 +409,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
+                  <a href="/categories/Next/" itemprop="url" rel="index">
+                    <span itemprop="name">Next</span>
                   </a>
                 </span>
 
@@ -459,7 +459,7 @@
 
       
         
-          <p>​    我使用的的是next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在<code>custom.styl</code>中添加一段代码,指定背景图片</p>
+          <p>​    我使用的的是Next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在<code>custom.styl</code>中添加一段代码,指定背景图片</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.jpg);</span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>​    尝试了之后发现,在本地<code>hexo s</code>后背景图片可以很好地显示,但是部署到github上后背景图片就不显示了    </p>
 <p>​    通过查看github上的css文件发现,<code>custom.styl</code>中的代码是加在了最后,可能这就是不显示的原因</p>
