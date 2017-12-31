@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-31T07:58:05.702Z</updated>
+  <updated>2017-12-31T07:59:19.792Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,21 +21,23 @@
     <link href="http://yoursite.com/2017/12/31/next-background-image/"/>
     <id>http://yoursite.com/2017/12/31/next-background-image/</id>
     <published>2017-12-31T07:22:46.000Z</published>
-    <updated>2017-12-31T07:58:05.702Z</updated>
+    <updated>2017-12-31T07:59:19.792Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;hr&gt;
+      &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;我使用的的是next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在&lt;code&gt;custom.styl&lt;/code&gt;中添加一段代码,指定背景图片&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;figure
-        
-      
+&lt;li&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;body&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;url&lt;/span&gt;(/images/background.jpg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;background-attachment&lt;/span&gt;: fixed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;尝试了之后发现,在本地&lt;code&gt;hexo s&lt;/code&gt;后背景图片可以很好地显示,但是部署到github上后背景图片就不显示了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过查看github上的css文件发现,&lt;code&gt;custom.styl&lt;/code&gt;中的代码是加在了最后,可能这就是不显示的原因&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在css文件中找到body的另一段代码,通过上下关系感觉是主题样式的css代码,因为在next中有四种不同的风格模板&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     

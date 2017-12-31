@@ -429,8 +429,7 @@
 
       
         
-          
-            <hr>
+          <hr>
 <ul>
 <li><p>我使用的的是next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在<code>custom.styl</code>中添加一段代码,指定背景图片</p>
 </li>
@@ -443,28 +442,13 @@
 <li><p>在css文件中找到body的另一段代码,通过上下关系感觉是主题样式的css代码,因为在next中有四种不同的风格模板</p>
 </li>
 </ul>
-<h3 id="通过模板中的样式文件来修改背景颜色"><a href="#通过模板中的样式文件来修改背景颜色" class="headerlink" title="通过模板中的样式文件来修改背景颜色"></a>通过模板中的样式文件来修改背景颜色</h3><ol>
-<li>找到<code>themes/next/sources/css/_schemes/</code>文件夹,此文件夹下为四种模板</li>
-<li>进入你所使用的模板,打开<code>index.styl</code>发现模板由其他styl文件静态导入</li>
-<li>打开<code>_brand.styl</code>,文件中<code>.site-meta</code>代码段即为此模板的底层数据,修改<code>background: $black-deep</code>为其他颜色即可更改默认背景颜色<ol>
-<li>注意<code>$black-deep</code>值在<code>themes/next/source/css/_variables</code>中的<code>base.styl</code>中定义,此文件也定义了所有的基本配色</li>
-</ol>
-</li>
-</ol>
-<h3 id="修改背景图片"><a href="#修改背景图片" class="headerlink" title="修改背景图片"></a>修改背景图片</h3><ol>
-<li><p>所要添加的背景图片先放到<code>themes/next/sources/images</code>或指定的url中</p>
-</li>
-<li><p>打开<code>themes/next/sources/css/_schemes/</code>文件夹,打开<code>index.styl</code>将你要添加的代码放在后面即可,如将body代码块放入文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"_layout"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"_brand"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"_menu"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"_sidebar"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"_posts"</span>;</span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.jpg);</span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>background-attachment属性指定了背景图片的依附样式,fixed表示图片固定在背景上,不随滚动而动</li>
-</ol>
-</li>
-<li><p>保存,生成,部署即可,效果如我的背景图片</p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/31/next-background-image/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
