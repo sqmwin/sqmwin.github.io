@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。 finalize 函数的调用机制　　俺经常啰嗦：“了解本质机制的重要性”。所以今天也得先谈谈 finalize 函数的调用机制。在聊之前，先声明一下：Java虚拟机规范">
+<meta name="description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
 <meta name="keywords" content="学习技巧,Java性能优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java性能优化[04] - 关于finalize函数">
 <meta property="og:url" content="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/index.html">
 <meta property="og:site_name" content="SingSo | 心事杂想">
-<meta property="og:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。 finalize 函数的调用机制　　俺经常啰嗦：“了解本质机制的重要性”。所以今天也得先谈谈 finalize 函数的调用机制。在聊之前，先声明一下：Java虚拟机规范">
+<meta property="og:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-31T18:29:00.573Z">
+<meta property="og:updated_time" content="2017-12-31T18:39:36.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java性能优化[04] - 关于finalize函数">
-<meta name="twitter:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。 finalize 函数的调用机制　　俺经常啰嗦：“了解本质机制的重要性”。所以今天也得先谈谈 finalize 函数的调用机制。在聊之前，先声明一下：Java虚拟机规范">
+<meta name="twitter:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
 
 
 
@@ -467,6 +467,7 @@
       
         <p><strong>本文摘抄自编程随想的博客</strong></p>
 <p>​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。</p>
+<a id="more"></a>
 <h3 id="finalize-函数的调用机制"><a href="#finalize-函数的调用机制" class="headerlink" title="finalize 函数的调用机制"></a>finalize 函数的调用机制</h3><p>　　俺经常啰嗦：“了解本质机制的重要性”。所以今天也得先谈谈 finalize 函数的调用机制。在聊之前，先声明一下：Java虚拟机规范（见<a href="https://docs.oracle.com/javase/specs/" target="_blank" rel="noopener">这里</a>），并没有硬性规定垃圾回收该不该搞，以及该如何搞。所以俺这里提到的 finalize 函数的调用机制，或许适用于大多数 JVM，但【不保证】适用于所有的 JVM。</p>
 <h4 id="何时被调用？"><a href="#何时被调用？" class="headerlink" title="何时被调用？"></a>何时被调用？</h4><p>　　finalize 啥时候才会被调用捏？一般来说，要等到JVM开始进行垃圾回收的时候，它才【<strong>有可能</strong>】被调用。而 JVM 进行垃圾回收的时间点是【非常】不确定的，依赖于各种运行时的环境因素。具体细节可以参见“本系列前一帖”。正是由于 finalize 函数调用时间点的不确定，导致了后面提到的某些缺点。</p>
 <h4 id="谁来调用？"><a href="#谁来调用？" class="headerlink" title="谁来调用？"></a>谁来调用？</h4><p>　　说完何时调用，咱接着来聊一下被谁调用？</p>

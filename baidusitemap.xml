@@ -4,85 +4,21 @@
 
     
   <url>
-    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-4/</loc>
-    <lastmod>2017-12-31T18:29:25.824Z</lastmod>
+    <loc>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-3/</loc>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
-        <title>Java新手进阶:细说引用类型</title>
-        <pubTime>2017-12-31T11:24:42.000Z</pubTime>
+        <title>Java性能优化[03] - 垃圾回收(GC)</title>
+        <pubTime>2017-12-31T16:16:42.000Z</pubTime>
         
         <tag>学习技巧</tag>
          
-        <tag>Java入门</tag>
+        <tag>Java性能优化</tag>
          
          
            
              
-              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-2/</loc>
-    <lastmod>2017-12-31T18:29:23.477Z</lastmod>
-    <data>
-        <display>
-        <title>Java新手的通病</title>
-        <pubTime>2017-12-31T11:19:46.000Z</pubTime>
-        
-        <tag>学习技巧</tag>
-         
-        <tag>Java入门</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-1/</loc>
-    <lastmod>2017-12-31T18:29:19.911Z</lastmod>
-    <data>
-        <display>
-        <title>学习技术的三部曲:WHAT,HOW,WHY</title>
-        <pubTime>2017-12-31T11:16:33.000Z</pubTime>
-        
-        <tag>学习技巧</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-5/</loc>
-    <lastmod>2017-12-31T18:29:17.502Z</lastmod>
-    <data>
-        <display>
-        <title>无处不在的二八原理</title>
-        <pubTime>2017-12-31T11:26:46.000Z</pubTime>
-        
-        <tag>学习技巧</tag>
-         
-        <tag>二八原理</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
+              <breadCrumb title="Java性能优化" url="https://sqmwin.github.io/categories/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
           
         </display>
     </data>
@@ -91,7 +27,7 @@
     
   <url>
     <loc>https://sqmwin.github.io/2017/12/31/next-background-image/</loc>
-    <lastmod>2017-12-31T18:29:15.156Z</lastmod>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
         <title>Next更换背景图片或背景颜色</title>
@@ -112,8 +48,50 @@
 
     
   <url>
+    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-1/</loc>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
+    <data>
+        <display>
+        <title>学习技术的三部曲:WHAT,HOW,WHY</title>
+        <pubTime>2017-12-31T11:16:33.000Z</pubTime>
+        
+        <tag>学习技巧</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-2/</loc>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
+    <data>
+        <display>
+        <title>Java新手的通病</title>
+        <pubTime>2017-12-31T11:19:46.000Z</pubTime>
+        
+        <tag>学习技巧</tag>
+         
+        <tag>Java入门</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-1/</loc>
-    <lastmod>2017-12-31T18:29:09.778Z</lastmod>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
         <title>Java性能优化[01] - 基本类型 vs 引用类型</title>
@@ -135,7 +113,7 @@
     
   <url>
     <loc>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-2/</loc>
-    <lastmod>2017-12-31T18:29:06.998Z</lastmod>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
         <title>Java性能优化[02] - 字符串过滤实战</title>
@@ -156,21 +134,43 @@
 
     
   <url>
-    <loc>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-3/</loc>
-    <lastmod>2017-12-31T18:29:04.356Z</lastmod>
+    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-5/</loc>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
-        <title>Java性能优化[03] - 垃圾回收(GC)</title>
-        <pubTime>2017-12-31T16:16:42.000Z</pubTime>
+        <title>无处不在的二八原理</title>
+        <pubTime>2017-12-31T11:26:46.000Z</pubTime>
         
         <tag>学习技巧</tag>
          
-        <tag>Java性能优化</tag>
+        <tag>二八原理</tag>
          
          
            
              
-              <breadCrumb title="Java性能优化" url="https://sqmwin.github.io/categories/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sqmwin.github.io/2017/12/31/java-attetion-4/</loc>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
+    <data>
+        <display>
+        <title>Java新手进阶:细说引用类型</title>
+        <pubTime>2017-12-31T11:24:42.000Z</pubTime>
+        
+        <tag>学习技巧</tag>
+         
+        <tag>Java入门</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java注意" url="https://sqmwin.github.io/categories/Java%E6%B3%A8%E6%84%8F/"/>
           
         </display>
     </data>
@@ -179,7 +179,7 @@
     
   <url>
     <loc>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/</loc>
-    <lastmod>2017-12-31T18:29:00.573Z</lastmod>
+    <lastmod>2017-12-31T18:39:36.434Z</lastmod>
     <data>
         <display>
         <title>Java性能优化[04] - 关于finalize函数</title>
