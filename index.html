@@ -460,8 +460,11 @@
 
       
         
-          <p><strong>本文摘抄自编程随想的博客</strong></p>
-<p>​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。</p>
+          
+          本文摘抄自编程随想的博客
+​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。
+finalize 函数的调用机制　　俺经常啰嗦：“了解本质机制的重要
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/01/java-attetion-3-performance-4/#more" rel="contents">
@@ -623,12 +626,12 @@
 
       
         
-          <p><strong>本文摘抄自编程随想的博客</strong></p>
-<h3 id="JVM-的内存空间"><a href="#JVM-的内存空间" class="headerlink" title="JVM 的内存空间"></a>JVM 的内存空间</h3><p>　　在 Java 虚拟机规范中（具体章节请看“这里”），提及了如下几种类型的内存空间：</p>
-<blockquote>
-<p>◇栈内存（Stack）：每个线程私有的。<br>◇堆内存（Heap）：所有线程公用的。<br>◇方法区（Method Area）：这里面存放了每个<strong>加载类的反射信息</strong>、<strong>类函数的代码</strong>、<strong>编译时常量</strong>等信息。<br>◇原生方法栈（Native Method Stack）：主要用于 JNI 中的原生代码，平时很少涉及。</p>
-</blockquote>
-<p>　　关于栈内存（Stack）和堆内存（Heap），已经在上次的帖子中扫盲过了，大伙儿应该有点印象。由于今天咱们要讨论的“垃圾回收”话题，主要是和堆内存（Heap）有关。其它的几个玩意儿不是今天讨论的重点。等以后有空了，或许可以单独聊一下。</p>
+          
+          本文摘抄自编程随想的博客
+JVM 的内存空间　　在 Java 虚拟机规范中（具体章节请看“这里”），提及了如下几种类型的内存空间：
+
+◇栈内存（Stack）：每个线程私有的。◇堆内存（Heap）：所有线程公用的。◇方法区（Method Area）：这里面存放了每个加载类的反射信息、类函数的代码、编译
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/01/java-attetion-3-performance-3/#more" rel="contents">
@@ -790,11 +793,13 @@
 
       
         
-          <p><strong>本文摘抄自编程随想的博客</strong></p>
-<h3 id="一个简单的需求"><a href="#一个简单的需求" class="headerlink" title="一个简单的需求"></a>一个简单的需求</h3><p>　　首先描述一下需求：</p>
-<p>给定一个 String 对象，过滤掉除了<strong>数字</strong>字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">filter</span><span class="params">(String str)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，函数名分别定为 filter1 到 filter5。其中 filter1 性能最差、filter5 性能最好。在看后续的内容之前，你先暗自思考一下，如果由你来实现该函数，大概会写成什么样？最好把你想好的函数写下来，便于跟俺给出的例子作对比。</p>
+          
+          本文摘抄自编程随想的博客
+一个简单的需求　　首先描述一下需求：
+给定一个 String 对象，过滤掉除了数字字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下：
+1String filter(String str);
+　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/01/java-attetion-3-performance-2/#more" rel="contents">
@@ -956,9 +961,11 @@
 
       
         
-          <p><strong>本文摘抄自编程随想的博客</strong></p>
-<p>​    在 Java 性能优化系列中，内存管理是一个要优先考虑的关键因素。而说到内存分配，就必然会涉及到基本类型和引用类型。所以我们今天就先来介绍一下这两种类型在性能方面各自有什么奥妙（关于引用类型的其它奥妙，请看“<a href="#3. Java新手进阶:细说引用类型">这里</a>”）。</p>
-<h3 id="名词定义"><a href="#名词定义" class="headerlink" title="名词定义"></a>名词定义</h3><p>　　先明确一下什么是“基本类型”，什么是“引用类型”。</p>
+          
+          本文摘抄自编程随想的博客
+​    在 Java 性能优化系列中，内存管理是一个要优先考虑的关键因素。而说到内存分配，就必然会涉及到基本类型和引用类型。所以我们今天就先来介绍一下这两种类型在性能方面各自有什么奥妙（关于引用类型的其它奥妙，请看“这里”）。
+名词定义　　先明确一下什么是“基本类型”，什
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/01/java-attetion-3-performance-1/#more" rel="contents">
@@ -1120,8 +1127,10 @@
 
       
         
-          <p><strong>本文摘抄自编程随想的博客</strong></p>
-<h2 id="什么是二八原理"><a href="#什么是二八原理" class="headerlink" title="什么是二八原理"></a>什么是二八原理</h2><p>　　估计看俺博客的人里面，应该有很多人听说过二八原理（如果你之前从来没听说过，那你的知识面有太窄的嫌疑）。但是知道二八原理的人有很多却不会（或者不善于）运用。直接的后果就是你在各种事情上付出了很多时间与精力，但是回报却很少。鉴于该原理非常非常的实用，俺打算专门写一个系列来聊聊和它相关的话题。</p>
+          
+          本文摘抄自编程随想的博客
+什么是二八原理　　估计看俺博客的人里面，应该有很多人听说过二八原理（如果你之前从来没听说过，那你的知识面有太窄的嫌疑）。但是知道二八原理的人有很多却不会（或者不善于）运用。直接的后果就是你在各种事情上付出了很多时间与精力，但是回报却很少。鉴于该原理非常非常的实用，俺打算专门
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/31/java-attetion-5/#more" rel="contents">

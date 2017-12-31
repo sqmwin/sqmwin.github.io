@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="SingSo | 心事杂想">
 <meta property="og:description" content="本文摘抄自编程随想的博客 一个简单的需求　　首先描述一下需求： 给定一个 String 对象，过滤掉除了数字字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下： 1String filter(String str); 　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，函数名分别定为 filter1 到 filter5。其中 filter1 性能最差、filter5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-31T17:07:42.813Z">
+<meta property="og:updated_time" content="2017-12-31T18:29:06.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java性能优化[02] - 字符串过滤实战">
 <meta name="twitter:description" content="本文摘抄自编程随想的博客 一个简单的需求　　首先描述一下需求： 给定一个 String 对象，过滤掉除了数字字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下： 1String filter(String str); 　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，函数名分别定为 filter1 到 filter5。其中 filter1 性能最差、filter5">
@@ -470,7 +470,6 @@
 <p>给定一个 String 对象，过滤掉除了<strong>数字</strong>字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">filter</span><span class="params">(String str)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，函数名分别定为 filter1 到 filter5。其中 filter1 性能最差、filter5 性能最好。在看后续的内容之前，你先暗自思考一下，如果由你来实现该函数，大概会写成什么样？最好把你想好的函数写下来，便于跟俺给出的例子作对比。</p>
-<a id="more"></a> 
 <h3 id="代码——循序渐进的5种实现方式"><a href="#代码——循序渐进的5种实现方式" class="headerlink" title="代码——循序渐进的5种实现方式"></a>代码——循序渐进的5种实现方式</h3><h4 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h4><p>　　为了方便测试性能，先准备好一坨测试代码，具体如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(args.length != <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String str = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">long</span> nBegin = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">1024</span>*<span class="number">1024</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            str = filterN(args[<span class="number">0</span>]);  <span class="comment">// 此处调用某个具体的过滤函数</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> nEnd = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        System.out.println(nEnd-nBegin);</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>　　在没有想好你的实现方式之前，先别偷看后续内容哦！另外，先注明一下，俺的 Java 环境是 JDK 1.5.0-09，使用的测试字符串是随机生成的，长度32个 char，只含字母和数字。由于 JDK 版本和机器性能不尽相同，你在自己机器上测试的结果可能跟俺下面给出的数值不太一样。</p>
@@ -528,7 +527,7 @@
   <p><span>本文标题:</span><a href="/2018/01/01/java-attetion-3-performance-2/">Java性能优化[02] - 字符串过滤实战</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiming Song 的个人博客">Qiming Song</a></p>
   <p><span>发布时间:</span>2018年01月01日 - 00:01</p>
-  <p><span>最后更新:</span>2018年01月01日 - 01:01</p>
+  <p><span>最后更新:</span>2018年01月01日 - 02:01</p>
   <p><span>原始链接:</span><a href="/2018/01/01/java-attetion-3-performance-2/" title="Java性能优化[02] - 字符串过滤实战">https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-2/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-2/"  aria-label="复制成功！"></i></span>
   </p>

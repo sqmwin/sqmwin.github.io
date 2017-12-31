@@ -109,7 +109,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意.jpg">
 <meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意02.jpg">
-<meta property="og:updated_time" content="2017-12-31T16:06:14.899Z">
+<meta property="og:updated_time" content="2017-12-31T18:29:25.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java新手进阶:细说引用类型">
 <meta name="twitter:description" content="本文摘抄自编程随想的博客 　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。 　　另外，顺便也把原先的帖子中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿的理解。 　　其实，引用类型的">
@@ -472,7 +472,6 @@
 <p>　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。</p>
 <p>　　另外，顺便也把<a href="##2.1 基本类型 vs 引用类型">原先的帖子</a>中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿的理解。</p>
 <p>　　其实，引用类型的变量非常类似于 C/C++ 的指针。为了形象起见，也为了打字方便，本文后面的内容，都把“引用类型的变量”称为【<strong>指针</strong>】。所以，如果你原先有 C/C++ 背景，今天讲的内容对你来说应该很好理解；否则的话，可能要多琢磨琢磨了。</p>
-<a id="more"></a> 
 <h2 id="创建问题"><a href="#创建问题" class="headerlink" title="创建问题"></a>创建问题</h2><p>　　假设咱们在【函数中】写了如下这个简单的语句：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer str = <span class="keyword">new</span> StringBuffer(<span class="string">"Hello world"</span>);</span><br></pre></td></tr></table></figure>
 <p>　　别看这个语句简单，其实包含了如下三个步骤：</p>
@@ -525,7 +524,7 @@
   <p><span>本文标题:</span><a href="/2017/12/31/java-attetion-4/">Java新手进阶:细说引用类型</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiming Song 的个人博客">Qiming Song</a></p>
   <p><span>发布时间:</span>2017年12月31日 - 19:12</p>
-  <p><span>最后更新:</span>2018年01月01日 - 00:01</p>
+  <p><span>最后更新:</span>2018年01月01日 - 02:01</p>
   <p><span>原始链接:</span><a href="/2017/12/31/java-attetion-4/" title="Java新手进阶:细说引用类型">https://sqmwin.github.io/2017/12/31/java-attetion-4/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://sqmwin.github.io/2017/12/31/java-attetion-4/"  aria-label="复制成功！"></i></span>
   </p>

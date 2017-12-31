@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sqmwin.github.io/"/>
-  <updated>2017-12-31T17:07:49.624Z</updated>
+  <updated>2017-12-31T18:29:00.573Z</updated>
   <id>https://sqmwin.github.io/</id>
   
   <author>
@@ -21,12 +21,18 @@
     <link href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/"/>
     <id>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/</id>
     <published>2017-12-31T16:17:15.000Z</published>
-    <updated>2017-12-31T17:07:49.624Z</updated>
+    <updated>2017-12-31T18:29:00.573Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize
+        
+      
     
     </summary>
     
@@ -44,16 +50,18 @@
     <link href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-3/"/>
     <id>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-3/</id>
     <published>2017-12-31T16:16:42.000Z</published>
-    <updated>2017-12-31T17:07:47.194Z</updated>
+    <updated>2017-12-31T18:29:04.356Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;JVM-的内存空间&quot;&gt;&lt;a href=&quot;#JVM-的内存空间&quot; class=&quot;headerlink&quot; title=&quot;JVM 的内存空间&quot;&gt;&lt;/a&gt;JVM 的内存空间&lt;/h3&gt;&lt;p&gt;　　在 Java 虚拟机规范中（具体章节请看“这里”），提及了如下几种类型的内存空间：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;◇栈内存（Stack）：每个线程私有的。&lt;br&gt;◇堆内存（Heap）：所有线程公用的。&lt;br&gt;◇方法区（Method Area）：这里面存放了每个&lt;strong&gt;加载类的反射信息&lt;/strong&gt;、&lt;strong&gt;类函数的代码&lt;/strong&gt;、&lt;strong&gt;编译时常量&lt;/strong&gt;等信息。&lt;br&gt;◇原生方法栈（Native Method Stack）：主要用于 JNI 中的原生代码，平时很少涉及。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;　　关于栈内存（Stack）和堆内存（Heap），已经在上次的帖子中扫盲过了，大伙儿应该有点印象。由于今天咱们要讨论的“垃圾回收”话题，主要是和堆内存（Heap）有关。其它的几个玩意儿不是今天讨论的重点。等以后有空了，或许可以单独聊一下。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;JVM-的内存空间&quot;&gt;&lt;a href=&quot;#JVM-的内存空间&quot; class=&quot;headerlink&quot; title=&quot;JVM 的内存空间&quot;&gt;&lt;/a&gt;JVM 的内存空间&lt;/h3&gt;&lt;p&gt;　　在
+        
+      
     
     </summary>
     
@@ -71,15 +79,18 @@
     <link href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-2/"/>
     <id>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-2/</id>
     <published>2017-12-31T16:14:30.000Z</published>
-    <updated>2017-12-31T17:07:42.813Z</updated>
+    <updated>2017-12-31T18:29:06.998Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;一个简单的需求&quot;&gt;&lt;a href=&quot;#一个简单的需求&quot; class=&quot;headerlink&quot; title=&quot;一个简单的需求&quot;&gt;&lt;/a&gt;一个简单的需求&lt;/h3&gt;&lt;p&gt;　　首先描述一下需求：&lt;/p&gt;
-&lt;p&gt;给定一个 String 对象，过滤掉除了&lt;strong&gt;数字&lt;/strong&gt;字符’0’到’9’以外的其它字符。要求时间开销尽可能小。过滤函数的原型如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;String &lt;span class=&quot;title&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String str)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;　　针对上述需求，俺写了5个不同的过滤函数。为了叙述方便，函数名分别定为 filter1 到 filter5。其中 filter1 性能最差、filter5 性能最好。在看后续的内容之前，你先暗自思考一下，如果由你来实现该函数，大概会写成什么样？最好把你想好的函数写下来，便于跟俺给出的例子作对比。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;一个简单的需求&quot;&gt;&lt;a href=&quot;#一个简单的需求&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -97,13 +108,18 @@
     <link href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-1/"/>
     <id>https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-1/</id>
     <published>2017-12-31T16:12:33.000Z</published>
-    <updated>2017-12-31T17:07:41.035Z</updated>
+    <updated>2017-12-31T18:29:09.778Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    在 Java 性能优化系列中，内存管理是一个要优先考虑的关键因素。而说到内存分配，就必然会涉及到基本类型和引用类型。所以我们今天就先来介绍一下这两种类型在性能方面各自有什么奥妙（关于引用类型的其它奥妙，请看“&lt;a href=&quot;#3. Java新手进阶:细说引用类型&quot;&gt;这里&lt;/a&gt;”）。&lt;/p&gt;
-&lt;h3 id=&quot;名词定义&quot;&gt;&lt;a href=&quot;#名词定义&quot; class=&quot;headerlink&quot; title=&quot;名词定义&quot;&gt;&lt;/a&gt;名词定义&lt;/h3&gt;&lt;p&gt;　　先明确一下什么是“基本类型”，什么是“引用类型”。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​    在 Java
+        
+      
     
     </summary>
     
@@ -121,12 +137,18 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-5/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-5/</id>
     <published>2017-12-31T11:26:46.000Z</published>
-    <updated>2017-12-31T17:04:21.570Z</updated>
+    <updated>2017-12-31T18:29:17.502Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;什么是二八原理&quot;&gt;&lt;a href=&quot;#什么是二八原理&quot; class=&quot;headerlink&quot; title=&quot;什么是二八原理&quot;&gt;&lt;/a&gt;什么是二八原理&lt;/h2&gt;&lt;p&gt;　　估计看俺博客的人里面，应该有很多人听说过二八原理（如果你之前从来没听说过，那你的知识面有太窄的嫌疑）。但是知道二八原理的人有很多却不会（或者不善于）运用。直接的后果就是你在各种事情上付出了很多时间与精力，但是回报却很少。鉴于该原理非常非常的实用，俺打算专门写一个系列来聊聊和它相关的话题。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;什么是二八原理&quot;&gt;&lt;a href=&quot;#什么是二八原理&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -144,14 +166,18 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-4/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-4/</id>
     <published>2017-12-31T11:24:42.000Z</published>
-    <updated>2017-12-31T16:06:14.899Z</updated>
+    <updated>2017-12-31T18:29:25.824Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。&lt;/p&gt;
-&lt;p&gt;　　另外，顺便也把&lt;a href=&quot;##2.1 基本类型 vs 引用类型&quot;&gt;原先的帖子&lt;/a&gt;中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿的理解。&lt;/p&gt;
-&lt;p&gt;　　其实，引用类型的变量非常类似于 C/C++ 的指针。为了形象起见，也为了打字方便，本文后面的内容，都把“引用类型的变量”称为【&lt;strong&gt;指针&lt;/strong&gt;】。所以，如果你原先有 C/C++ 背景，今天讲的内容对你来说应该很好理解；否则的话，可能要多琢磨琢磨了。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　在前几天的帖子《Java性能优化[1]：基本类型 vs
+        
+      
     
     </summary>
     
@@ -169,18 +195,18 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-2/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-2/</id>
     <published>2017-12-31T11:19:46.000Z</published>
-    <updated>2017-12-31T16:06:03.444Z</updated>
+    <updated>2017-12-31T18:29:23.477Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;对算法和数据结构不熟悉&quot;&gt;&lt;a href=&quot;#对算法和数据结构不熟悉&quot; class=&quot;headerlink&quot; title=&quot;对算法和数据结构不熟悉&quot;&gt;&lt;/a&gt;对算法和数据结构不熟悉&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;为什么我先拿“数据结构和算法”说事捏？这玩意是写程序最最基本的东东。不管你使用 Java 还是其它的什么语言，都离不开它。而且这玩意是跨语言的，学好之后不管在哪门语言中都能用得上。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;既然“数据结构和算法”这么重要，为什么很多 Java 新手却很不熟悉捏？我琢磨了一下，估计有两种可能。有些人虽然是计算机系毕业的，但是当初压根没好好学过这门课程，到工作时早都还给老师了；还有一些人是中途转行干编程，转行后又没有好好地打基础（都指望速成）。&lt;/li&gt;
-&lt;li&gt;下面我列出几个很基本的问题，如果你每一个问题都搞得很清楚，那说明你过了这关，可以去看看下一个帖子了。否则的话，你赶紧去找本算法和数据结构的书恶补一下吧。&lt;/li&gt;
-&lt;/ul&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;对算法和数据结构不熟悉&quot;&gt;&lt;a href=&quot;#对算法和数据结构不熟悉&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -198,14 +224,18 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-1/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-1/</id>
     <published>2017-12-31T11:16:33.000Z</published>
-    <updated>2017-12-31T17:04:27.937Z</updated>
+    <updated>2017-12-31T18:29:19.911Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;　　最近几天有些网友在邮件里面问我关于学习的问题。有好几个人觉得工作了几年，也学会了不少的类库、框架、甚至语言，但是感觉自己的能力没有太大的提高。因此今天来说一下我个人对这方面的体会，希望对大伙儿（尤其是新手）有帮助。&lt;/p&gt;
-&lt;p&gt;　　先声明一下，本帖子讨论的三部曲是指你已经选定了某个技术方向之后，该如何学习；至于如何选定技术方向，则属于另一个话题，不在今天的讨论之列。&lt;/p&gt;
-&lt;p&gt;　　我把学习归类为三个步骤：What、How、Why。经过我对周围同事和朋友的观察，大部分感觉自己技术没有提高的人，都仅仅停留在What阶段。下面我把这三个步骤解释一下。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　最近几天有些网友在邮件里面问我关于学习的问题。有好几个人觉得工作了几年，也学会了不少的类库、框架、甚至语言，但是感觉自己的能力没有太大的提高。因此今天来说一下我个人对这方面的体会，希望对大伙儿（尤
+        
+      
     
     </summary>
     
@@ -221,15 +251,18 @@
     <link href="https://sqmwin.github.io/2017/12/31/next-background-image/"/>
     <id>https://sqmwin.github.io/2017/12/31/next-background-image/</id>
     <published>2017-12-31T07:23:46.000Z</published>
-    <updated>2017-12-31T17:08:48.625Z</updated>
+    <updated>2017-12-31T18:29:15.156Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;​    我使用的的是Next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在&lt;code&gt;custom.styl&lt;/code&gt;中添加一段代码,指定背景图片&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;body&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;url&lt;/span&gt;(/images/background.jpg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;background-attachment&lt;/span&gt;: fixed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;​    尝试了之后发现,在本地&lt;code&gt;hexo s&lt;/code&gt;后背景图片可以很好地显示,但是部署到github上后背景图片就不显示了    &lt;/p&gt;
-&lt;p&gt;​    通过查看github上的css文件发现,&lt;code&gt;custom.styl&lt;/code&gt;中的代码是加在了最后,可能这就是不显示的原因&lt;/p&gt;
-&lt;p&gt;​    在css文件中找到body的另一段代码,通过上下关系感觉是主题样式的css代码,因为在next中有四种不同的风格模板&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;​    我使用的的是Next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在&lt;code&gt;custom.styl&lt;/code&gt;中添加一段代码,指定背景图片&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
     
     </summary>
     
