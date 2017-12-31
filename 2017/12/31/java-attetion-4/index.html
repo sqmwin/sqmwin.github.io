@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="SingSo, 心事杂想" />
+  <meta name="keywords" content="java,学习技巧," />
 
 
 
@@ -98,13 +98,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="SingSo | 心事杂想">
-<meta property="og:url" content="https://sqmwin.github.io/tags/test/index.html">
+<meta name="description" content="本文摘抄自编程随想的博客 Java新手进阶:细说引用类型　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。 　　另外，顺便也把原先的帖子中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿">
+<meta name="keywords" content="java,学习技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java新手进阶:细说引用类型">
+<meta property="og:url" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/index.html">
 <meta property="og:site_name" content="SingSo | 心事杂想">
+<meta property="og:description" content="本文摘抄自编程随想的博客 Java新手进阶:细说引用类型　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。 　　另外，顺便也把原先的帖子中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意.jpg">
+<meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意02.jpg">
+<meta property="og:updated_time" content="2017-12-31T11:28:04.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SingSo | 心事杂想">
+<meta name="twitter:title" content="Java新手进阶:细说引用类型">
+<meta name="twitter:description" content="本文摘抄自编程随想的博客 Java新手进阶:细说引用类型　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。 　　另外，顺便也把原先的帖子中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿">
+<meta name="twitter:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意.jpg">
 
 
 
@@ -133,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="https://sqmwin.github.io/tags/test/"/>
+  <link rel="canonical" href="https://sqmwin.github.io/2017/12/31/java-attetion-4/"/>
 
 
 
 
 
-  <title>标签: test | SingSo | 心事杂想</title>
+  <title>Java新手进阶:细说引用类型 | SingSo | 心事杂想</title>
   
 
 
@@ -211,7 +219,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -339,54 +347,303 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>test<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sqmwin.github.io/2017/12/31/java-attetion-4/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiming Song">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SingSo | 心事杂想">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/31/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Java新手进阶:细说引用类型</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T01:19:19+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-31T19:24:42+08:00">
+                2017-12-31
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/31/java-attetion-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/12/31/java-attetion-4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>本文摘抄自编程随想的博客</strong></p>
+<h1 id="Java新手进阶-细说引用类型"><a href="#Java新手进阶-细说引用类型" class="headerlink" title="Java新手进阶:细说引用类型"></a>Java新手进阶:细说引用类型</h1><p>　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。</p>
+<p>　　另外，顺便也把<a href="##2.1 基本类型 vs 引用类型">原先的帖子</a>中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿的理解。</p>
+<p>　　其实，引用类型的变量非常类似于 C/C++ 的指针。为了形象起见，也为了打字方便，本文后面的内容，都把“引用类型的变量”称为【<strong>指针</strong>】。所以，如果你原先有 C/C++ 背景，今天讲的内容对你来说应该很好理解；否则的话，可能要多琢磨琢磨了。</p>
+<a id="more"></a> 
+<h2 id="创建问题"><a href="#创建问题" class="headerlink" title="创建问题"></a>创建问题</h2><p>　　假设咱们在【函数中】写了如下这个简单的语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer str = <span class="keyword">new</span> StringBuffer(<span class="string">"Hello world"</span>);</span><br></pre></td></tr></table></figure>
+<p>　　别看这个语句简单，其实包含了如下三个步骤：</p>
+<p>　　首先，new 操作符会在【堆】（Heap）里申请了一坨内存，把创建好的 StringBuffer 对象放进去。</p>
+<p>　　其次，StringBuffer str 声明了一个指针。这个指针本身是存储在【栈】（Stack）上的（因为前面俺说了：此语句写在【函数中】），用来指向某个 StringBuffer 类型的对象。或者换一种说法，这个指针可以用来保存某个 StringBuffer 对象的地址。</p>
+<p>　　最后，当中这个 等于号（赋值符号）把两者关联起来，也就是把刚申请的那一坨内存的地址保存成 str 的值。</p>
+<p>　　为了加深列位看官的印象，把图片再拿出来秀一下：</p>
+<p><img src="00_Java注意.jpg" alt="不见图 请翻墙"></p>
+<p>##引用对象之间的赋值、判相等</p>
+<p>　　通过上述的图解，大伙儿应该明白指针变量和该指针变量指向的【对象】是一个什么关系了吧？</p>
+<p>　　还是接着刚才的例子，再来看赋值的问题。对于如下语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer str2 = str;</span><br></pre></td></tr></table></figure>
+<p>　　这个赋值语句是啥意思捏？实际上就是把 str 的地址复制给 str2；记住，是地址的复制，StringBuffer 对象本身并【没有】复制。所以两个指针指向的是同一个东东。</p>
+<p>　　再搞一张示意图，如下（今天画这些图可把俺累坏了）：</p>
+<p><img src="00_Java注意02.jpg" alt="不见图 请翻墙"></p>
+<p>　　明白了赋值，判断相等的问题（就是==操作符）也就简单了。当我们写如下语句时，只是判断两个指针的【值】（也就是对象的地址）是否相等，并【不是】判断“被指向的对象”是否内容相同。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(str2 == str)</span><br></pre></td></tr></table></figure>
+<p>　　实际上两个指针的值相同，则肯定是指向同一个对象（所以对象内容必定相同）。但是两个内容相同的对象，它们的地址可能不一样（比如克隆出来的多个对象之间，地址就不同）。</p>
+<p>##final 常量的问题</p>
+<p>　　针对引用类型变量的 final 修饰符也是很多人搞混淆的地方。实际上 final 只是修饰指针的值（也就是限定指针保存的地址不能变）。至于该指针指向的对象，内容是否能变，那就管不着了。所以，对于如下语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> StringBuffer strConst = <span class="keyword">new</span> StringBuffer();</span><br></pre></td></tr></table></figure>
+<p>　　你可以修改它指向的对象的【内容】，比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strConst.append(<span class="string">"hello world"</span>);</span><br></pre></td></tr></table></figure>
+<p>　　但是【不能】修改它的【值】，比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strConst = <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+<p>##传参的问题</p>
+<p>　　引用类型（在函数调用中）的传参问题，是一个相当扯的问题。有些书上说是传值，有些书上说是传引用。搞得 Java 程序员都快成神经分裂了。所以，我们最后来谈一下“引用类型参数传递”的问题。</p>
+<p>　　还是拿刚才的例子，假设现在要把刚才创建的那一坨字符串打印出来，我们会使用如下语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(str);</span><br></pre></td></tr></table></figure>
+<p>　　这个语句又是什么意思捏？这时候就两说了。</p>
+<p>　　第一种理解：</p>
+<p>　　可以认为传进函数的是 str 这个指针，指针说白了就是一个地址的值，说得再白一点，就是个整数。按照这种理解，就是传值的方式。也就是说，参数传递的是指针本身，所以是传值的。</p>
+<p>　　第二种理解：</p>
+<p>　　可以认为传进去的是 StringBuffer 对象，按照这种理解，就是传引用方式了。因为我们确实是把对象的地址（也就是引用）给传了进去。</p>
+<p>　　费了这么多口水，其实不论是“传引用”还是“传值”，都可以讲得通，关键取决于你是【如何看待】参数所传递的【东西】。这就好比量子力学中“光的波粒二象性”，如果你以粒子的方式去测量它，它看起来像粒子；如果你以波动的方式去观测它，它看起来像波动。假如你不太懂量子力学，前面这话就当我没说 :-)</p>
 
       
     </div>
+    
+    
+    
 
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/12/31/java-attetion-4/">Java新手进阶:细说引用类型</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Qiming Song 的个人博客">Qiming Song</a></p>
+  <p><span>发布时间:</span>2017年12月31日 - 19:12</p>
+  <p><span>最后更新:</span>2017年12月31日 - 19:12</p>
+  <p><span>原始链接:</span><a href="/2017/12/31/java-attetion-4/" title="Java新手进阶:细说引用类型">https://sqmwin.github.io/2017/12/31/java-attetion-4/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://sqmwin.github.io/2017/12/31/java-attetion-4/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+      
+	</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Qiming Song WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Qiming Song Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/学习技巧/" rel="tag"># 学习技巧</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/31/java-attetion-3/" rel="next" title="Java性能优化">
+                <i class="fa fa-chevron-left"></i> Java性能优化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/31/java-attetion-5/" rel="prev" title="无处不在的二八原理">
+                无处不在的二八原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a47ed0d10828091" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -394,6 +651,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
 
         </div>
         
@@ -414,8 +677,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -530,6 +802,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java新手进阶-细说引用类型"><span class="nav-number">1.</span> <span class="nav-text">Java新手进阶:细说引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建问题"><span class="nav-number">1.1.</span> <span class="nav-text">创建问题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -673,10 +961,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -700,6 +988,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 99561, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 99561, xid: "2017/12/31/java-attetion-4/"});
 		
 
 		(function() {
