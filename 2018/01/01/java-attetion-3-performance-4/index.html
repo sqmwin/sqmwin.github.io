@@ -81,7 +81,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="SingSo, 心事杂想" />
+  <meta name="keywords" content="Java,学习技巧," />
 
 
 
@@ -99,13 +99,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="SingSo | 心事杂想">
-<meta property="og:url" content="https://sqmwin.github.io/archives/2017/index.html">
+<meta name="description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
+<meta name="keywords" content="Java,学习技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java性能优化[04] - 关于finalize函数">
+<meta property="og:url" content="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/index.html">
 <meta property="og:site_name" content="SingSo | 心事杂想">
+<meta property="og:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-31T16:17:40.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SingSo | 心事杂想">
+<meta name="twitter:title" content="Java性能优化[04] - 关于finalize函数">
+<meta name="twitter:description" content="本文摘抄自编程随想的博客 ​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。">
 
 
 
@@ -134,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://sqmwin.github.io/archives/2017/"/>
+  <link rel="canonical" href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/"/>
 
 
 
 
 
-  <title>归档 | SingSo | 心事杂想</title>
+  <title>Java性能优化[04] - 关于finalize函数 | SingSo | 心事杂想</title>
   
 
 
@@ -212,7 +217,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -340,259 +345,281 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiming Song">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SingSo | 心事杂想">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">Java性能优化[04] - 关于finalize函数</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T00:17:15+08:00">
+                2018-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java性能优化/" itemprop="url" rel="index">
+                    <span itemprop="name">Java性能优化</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/01/java-attetion-3-performance-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/01/01/java-attetion-3-performance-4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/java-attetion-5/" itemprop="url">
-              
-                <span itemprop="name">无处不在的二八原理</span>
-              
-            </a>
-        
-      </h3>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T19:26:46+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/java-attetion-4/" itemprop="url">
-              
-                <span itemprop="name">Java新手进阶:细说引用类型</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T19:24:42+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/java-attetion-2/" itemprop="url">
-              
-                <span itemprop="name">Java新手的通病</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T19:19:46+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/java-attetion-1/" itemprop="url">
-              
-                <span itemprop="name">学习技术的三部曲:WHAT,HOW,WHY</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T19:16:33+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><strong>本文摘抄自编程随想的博客</strong></p>
+<p>​    上次的帖子聊了垃圾回收器的调优，当时啰嗦了比较长的篇幅，就没再继续提 finalize 的事儿（其实这玩意儿和 GC 是沾点儿边的）。今天咱就把 finalize 函数相关的性能话题拿来说一下。</p>
+<a id="more"></a> 
+<h3 id="finalize-函数的调用机制"><a href="#finalize-函数的调用机制" class="headerlink" title="finalize 函数的调用机制"></a>finalize 函数的调用机制</h3><p>　　俺经常啰嗦：“了解本质机制的重要性”。所以今天也得先谈谈 finalize 函数的调用机制。在聊之前，先声明一下：Java虚拟机规范（见<a href="https://docs.oracle.com/javase/specs/" target="_blank" rel="noopener">这里</a>），并没有硬性规定垃圾回收该不该搞，以及该如何搞。所以俺这里提到的 finalize 函数的调用机制，或许适用于大多数 JVM，但【不保证】适用于所有的 JVM。</p>
+<h4 id="何时被调用？"><a href="#何时被调用？" class="headerlink" title="何时被调用？"></a>何时被调用？</h4><p>　　finalize 啥时候才会被调用捏？一般来说，要等到JVM开始进行垃圾回收的时候，它才【<strong>有可能</strong>】被调用。而 JVM 进行垃圾回收的时间点是【非常】不确定的，依赖于各种运行时的环境因素。具体细节可以参见“本系列前一帖”。正是由于 finalize 函数调用时间点的不确定，导致了后面提到的某些缺点。</p>
+<h4 id="谁来调用？"><a href="#谁来调用？" class="headerlink" title="谁来调用？"></a>谁来调用？</h4><p>　　说完何时调用，咱接着来聊一下被谁调用？</p>
+<p>　　常见的 JVM 会通过 GC 的垃圾回收线程来进行 finalize 函数的调用。由于垃圾回收线程比较重要（人家好歹也是 JVM 的一个组成部分嘛），为了防止 finalize 函数抛出的异常影响到垃圾回收线程的运作，垃圾回收线程会在调用每一个 finalize 函数时进行 try/catch，如果捕获到异常，就直接丢弃，然后接着处理下一个失效对象的 finalize 函数。</p>
+<h3 id="对-finalize-函数的误解和误用"><a href="#对-finalize-函数的误解和误用" class="headerlink" title="对 finalize 函数的误解和误用"></a>对 finalize 函数的误解和误用</h3><h4 id="依靠-finalize-来释放资源"><a href="#依靠-finalize-来释放资源" class="headerlink" title="依靠 finalize 来释放资源"></a>依靠 finalize 来释放资源</h4><p>　　很多同学寄希望于通过 finalize() 来完成类对象中某些资源的释放（比如关闭数据库连接之类）。</p>
+<p>　　有这种企图的同学，请注意看本文后面的“finalize 函数的缺点”！</p>
+<h3 id="使用-finalize-函数的注意事项"><a href="#使用-finalize-函数的注意事项" class="headerlink" title="使用 finalize 函数的注意事项"></a>使用 finalize 函数的注意事项</h3><p>　　下面介绍的注意事项，有些可能和性能优化关系不大，俺也一并列出来。</p>
+<h4 id="调用时间不确定——有资源浪费的风险"><a href="#调用时间不确定——有资源浪费的风险" class="headerlink" title="调用时间不确定——有资源浪费的风险"></a>调用时间不确定——有资源浪费的风险</h4><p>　　前面已经介绍了调用机制。同学们应该认清【<strong>finalize 的调用时机是很不确定的</strong>】这样一个事实。所以，假如你把某些稀缺资源放到 finalize() 中释放，可能会导致该稀缺资源等上很久很久很久以后才被释放。这可是资源的浪费啊！</p>
+<p>　　另外，某些类对象所携带的资源（比如某些 JDBC 的类）可能本身就很耗费内存，这些资源的延迟释放会造成很大的性能问题。</p>
+<h4 id="可能不被调用——有资源泄漏的风险"><a href="#可能不被调用——有资源泄漏的风险" class="headerlink" title="可能不被调用——有资源泄漏的风险"></a>可能不被调用——有资源泄漏的风险</h4><p>　　很多同学误以为 finalize() 总是会被调用，【其实不然】。在某些情况下，finalize() 压根儿不被调用。比如在 JVM 退出的当口，内存中那些对象的 finalize 函数可能就不会被调用了。</p>
+<p>　　俺估摸着：还有同学在打 “runFinalizersOnExit” 的主意，来确保所有的 finalize 在 JVM 退出前被调用。但是，很可惜也很遗憾，该方法从 JDK 1.2 开始，就已经被废弃了。即使该方法不被废弃，也是有很大的线程安全隐患滴！企图打这个主意的同学，趁早死了这条心吧！</p>
+<p>　　从上述可以看出，一旦你依赖 finalize() 来帮你释放资源，那可是很不妙啊（【有资源泄漏的危险】）！关于资源泄漏的严重性，俺在<a href="##1.3 缺少良好的编程习惯">这里</a>曾经提到过。很多时候，资源泄露导致的性能问题更加严重，万万不可小看。</p>
+<h4 id="对象可能在-finalize-函数调用时复活——有诈尸的风险"><a href="#对象可能在-finalize-函数调用时复活——有诈尸的风险" class="headerlink" title="对象可能在 finalize 函数调用时复活——有诈尸的风险"></a>对象可能在 finalize 函数调用时复活——有诈尸的风险</h4><p>　　诈尸的情况比较少见，不过俺还是稍微提一下。</p>
+<p>　　本来，只有当某个对象已经失效（没有引用），垃圾回收器才会调用该对象的 finalize 函数。但是，万一碰上某个变态的程序员，在 finalize() 函数内部再把对象自身的引用（也就是 this）重新保存在某处，也就相当于把自己复活了（因为这个对象重新有了引用，不再处于失效状态）。这种做法是不是够变态啊 :-)</p>
+<p>　　为了防止发生这种诡异的事情，垃圾回收器只能在每次调用完 finalize() 之后再次去检查该对象是否还处于失效状态。这无形中又增加了 JVM 的开销。</p>
+<p>　　随便提一下。由于 JDK 的文档中规定了（具体参见<a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html#finalize%28%29" target="_blank" rel="noopener">这里</a>），JVM 对于每一个类对象实例最多只会调用一次 finalize()。所以，对于那些诈尸的实例，当它们真正死亡时，finalize() 反而不会被调用了。这看起来是不是很奇怪？</p>
+<h4 id="要记得自己做异常捕获"><a href="#要记得自己做异常捕获" class="headerlink" title="要记得自己做异常捕获"></a>要记得自己做异常捕获</h4><p>　　刚才在介绍 finalize() 调用机制时提到，一旦有异常抛出到 finalize 函数外面，会被垃圾回收线程捕获并丢弃。也就是说，异常被忽略掉了（异常被忽略的危害，<a href="## 1.4 异常处理使用不当">这里</a>有提到）。为了防止这种事儿，凡是 finalize() 中有可能抛出异常的代码，你都得写上 try catch 语句，自己进行捕获。</p>
+<h4 id="要小心线程安全"><a href="#要小心线程安全" class="headerlink" title="要小心线程安全"></a>要小心线程安全</h4><p>　　由于调用 finalize() 的是垃圾回收线程，和你自己代码的线程不是同一个线程；甚至不同对象的 finalize() 可能会被不同的垃圾回收线程调用（比如使用“并行收集器”的时候）。所以，当你在 finalize() 里面访问某些数据的时候，还得时刻留心线程安全的问题。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>　　前面废了这么多话，最后稍微总结一下。俺窃以为：finalize 实在是 Java 的<strong>鸡肋</strong>。或许它对于【极少数】程序员有用，但对于大多数人（包括俺自个儿），这玩意儿压根儿没啥好处。大伙儿还是尽量<strong>不用为妙</strong>。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/next-background-image/" itemprop="url">
-              
-                <span itemprop="name">Next更换背景图片或背景颜色</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T15:23:46+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/31/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T01:19:19+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/01/01/java-attetion-3-performance-4/">Java性能优化[04] - 关于finalize函数</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Qiming Song 的个人博客">Qiming Song</a></p>
+  <p><span>发布时间:</span>2018年01月01日 - 00:01</p>
+  <p><span>最后更新:</span>2018年01月01日 - 00:01</p>
+  <p><span>原始链接:</span><a href="/2018/01/01/java-attetion-3-performance-4/" title="Java性能优化[04] - 关于finalize函数">https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://sqmwin.github.io/2018/01/01/java-attetion-3-performance-4/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+      
+	</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Qiming Song WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Qiming Song Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/学习技巧/" rel="tag"># 学习技巧</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/01/java-attetion-3-performance-3/" rel="next" title="Java性能优化[03] - 垃圾回收(GC)">
+                <i class="fa fa-chevron-left"></i> Java性能优化[03] - 垃圾回收(GC)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a47ed0d10828091" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -600,6 +627,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
 
         </div>
         
@@ -620,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -736,6 +778,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#finalize-函数的调用机制"><span class="nav-number">1.</span> <span class="nav-text">finalize 函数的调用机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#何时被调用？"><span class="nav-number">1.1.</span> <span class="nav-text">何时被调用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谁来调用？"><span class="nav-number">1.2.</span> <span class="nav-text">谁来调用？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对-finalize-函数的误解和误用"><span class="nav-number">2.</span> <span class="nav-text">对 finalize 函数的误解和误用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#依靠-finalize-来释放资源"><span class="nav-number">2.1.</span> <span class="nav-text">依靠 finalize 来释放资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-finalize-函数的注意事项"><span class="nav-number">3.</span> <span class="nav-text">使用 finalize 函数的注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#调用时间不确定——有资源浪费的风险"><span class="nav-number">3.1.</span> <span class="nav-text">调用时间不确定——有资源浪费的风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可能不被调用——有资源泄漏的风险"><span class="nav-number">3.2.</span> <span class="nav-text">可能不被调用——有资源泄漏的风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象可能在-finalize-函数调用时复活——有诈尸的风险"><span class="nav-number">3.3.</span> <span class="nav-text">对象可能在 finalize 函数调用时复活——有诈尸的风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要记得自己做异常捕获"><span class="nav-number">3.4.</span> <span class="nav-text">要记得自己做异常捕获</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要小心线程安全"><span class="nav-number">3.5.</span> <span class="nav-text">要小心线程安全</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -879,11 +937,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -908,6 +964,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 99561, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 99561, xid: "2018/01/01/java-attetion-3-performance-4/"});
 		
 
 		(function() {
