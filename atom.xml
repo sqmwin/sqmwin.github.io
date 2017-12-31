@@ -5,9 +5,9 @@
   <subtitle>骨灰灰崽的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://sqmwin.github.io/"/>
   <updated>2017-12-31T08:06:32.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://sqmwin.github.io/</id>
   
   <author>
     <name>Qiming Song</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>next更换背景图片或背景颜色</title>
-    <link href="http://yoursite.com/2017/12/31/next-background-image/"/>
-    <id>http://yoursite.com/2017/12/31/next-background-image/</id>
+    <link href="https://sqmwin.github.io/2017/12/31/next-background-image/"/>
+    <id>https://sqmwin.github.io/2017/12/31/next-background-image/</id>
     <published>2017-12-31T07:23:46.000Z</published>
     <updated>2017-12-31T08:06:32.000Z</updated>
     
@@ -33,21 +33,21 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+      <category term="Blog" scheme="https://sqmwin.github.io/categories/Blog/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://sqmwin.github.io/tags/hexo/"/>
     
-      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
+      <category term="next主题" scheme="https://sqmwin.github.io/tags/next%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="背景图片" scheme="http://yoursite.com/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"/>
+      <category term="背景图片" scheme="https://sqmwin.github.io/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   
   <entry>
     <title>Java学习的注意事项</title>
-    <link href="http://yoursite.com/2017/12/31/java_attetion/"/>
-    <id>http://yoursite.com/2017/12/31/java_attetion/</id>
+    <link href="https://sqmwin.github.io/2017/12/31/java_attetion/"/>
+    <id>https://sqmwin.github.io/2017/12/31/java_attetion/</id>
     <published>2017-12-30T19:13:46.000Z</published>
     <updated>2017-12-31T08:08:14.533Z</updated>
     
@@ -60,21 +60,21 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+      <category term="Java" scheme="https://sqmwin.github.io/categories/Java/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="java" scheme="https://sqmwin.github.io/tags/java/"/>
     
-      <category term="学习技巧" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/"/>
+      <category term="学习技巧" scheme="https://sqmwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/"/>
     
-      <category term="二八原理" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%85%AB%E5%8E%9F%E7%90%86/"/>
+      <category term="二八原理" scheme="https://sqmwin.github.io/tags/%E4%BA%8C%E5%85%AB%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/12/31/hello-world/"/>
-    <id>http://yoursite.com/2017/12/31/hello-world/</id>
+    <link href="https://sqmwin.github.io/2017/12/31/hello-world/"/>
+    <id>https://sqmwin.github.io/2017/12/31/hello-world/</id>
     <published>2017-12-30T17:19:19.225Z</published>
     <updated>2017-12-30T20:19:44.731Z</updated>
     
@@ -140,12 +140,12 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="https://sqmwin.github.io/categories/test/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="test" scheme="https://sqmwin.github.io/tags/test/"/>
     
-      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://sqmwin.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
