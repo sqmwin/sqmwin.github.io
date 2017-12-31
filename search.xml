@@ -8,7 +8,7 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>java</tag>
+        <tag>Java</tag>
         <tag>学习技巧</tag>
         <tag>二八原理</tag>
       </tags>
@@ -21,7 +21,7 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>java</tag>
+        <tag>Java</tag>
         <tag>学习技巧</tag>
       </tags>
   </entry>
@@ -33,7 +33,7 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>java</tag>
+        <tag>Java</tag>
         <tag>学习技巧</tag>
       </tags>
   </entry>
@@ -45,7 +45,7 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>java</tag>
+        <tag>Java</tag>
         <tag>学习技巧</tag>
       </tags>
   </entry>
@@ -57,7 +57,7 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>java</tag>
+        <tag>Java</tag>
         <tag>学习技巧</tag>
       </tags>
   </entry>
@@ -69,8 +69,8 @@
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>next主题</tag>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
         <tag>背景图片</tag>
       </tags>
   </entry>
@@ -79,10 +79,10 @@
     <url>%2F2017%2F12%2F31%2Fhello-world%2F</url>
     <content type="text"><![CDATA[文章的YAML属性 key description default layout Layout post(文章)或者page(页面) title date 创建日期 创建日期 updated 修改日期 文件修改日期 comments 是否开启评论 true tags 标签 每一个标签占一行 以 - 开头 categories 分类 同上,不过只建议分到一个类中 permalink url中的名字(建议设置成英文) 文件名 copyright 自行设置的版权信息 true or false 其他&lt;!-- more --&gt;用在文章中,起到”阅读全文”的效果 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
-        <category>test</category>
+        <category>Test</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Test</tag>
         <tag>测试</tag>
       </tags>
   </entry>
