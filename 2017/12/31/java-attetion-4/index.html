@@ -109,7 +109,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意.jpg">
 <meta property="og:image" content="https://sqmwin.github.io/2017/12/31/java-attetion-4/00_Java注意02.jpg">
-<meta property="og:updated_time" content="2017-12-31T11:34:29.695Z">
+<meta property="og:updated_time" content="2017-12-31T16:02:31.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java新手进阶:细说引用类型">
 <meta name="twitter:description" content="本文摘抄自编程随想的博客 Java新手进阶:细说引用类型　　在前几天的帖子《Java性能优化[1]：基本类型 vs 引用类型》里，俺大概介绍了“引用类型”与“基本类型”在存储上的区别。昨天有网友在评论中批评说“引用类型变量和它所引用的对象”没区分清楚，容易混淆。所以今天专门来说一下引用类型的相关细节。 　　另外，顺便也把原先的帖子中，关于“两种类型的存储方式”这节补充了一下，加点插图，有助于大伙儿">
@@ -481,8 +481,7 @@
 <p>　　最后，当中这个 等于号（赋值符号）把两者关联起来，也就是把刚申请的那一坨内存的地址保存成 str 的值。</p>
 <p>　　为了加深列位看官的印象，把图片再拿出来秀一下：</p>
 <p><img src="00_Java注意.jpg" alt="不见图 请翻墙"></p>
-<p>##引用对象之间的赋值、判相等</p>
-<p>　　通过上述的图解，大伙儿应该明白指针变量和该指针变量指向的【对象】是一个什么关系了吧？</p>
+<h2 id="引用对象之间的赋值、判相等"><a href="#引用对象之间的赋值、判相等" class="headerlink" title="引用对象之间的赋值、判相等"></a>引用对象之间的赋值、判相等</h2><p>　　通过上述的图解，大伙儿应该明白指针变量和该指针变量指向的【对象】是一个什么关系了吧？</p>
 <p>　　还是接着刚才的例子，再来看赋值的问题。对于如下语句：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer str2 = str;</span><br></pre></td></tr></table></figure>
 <p>　　这个赋值语句是啥意思捏？实际上就是把 str 的地址复制给 str2；记住，是地址的复制，StringBuffer 对象本身并【没有】复制。所以两个指针指向的是同一个东东。</p>
@@ -491,15 +490,13 @@
 <p>　　明白了赋值，判断相等的问题（就是==操作符）也就简单了。当我们写如下语句时，只是判断两个指针的【值】（也就是对象的地址）是否相等，并【不是】判断“被指向的对象”是否内容相同。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(str2 == str)</span><br></pre></td></tr></table></figure>
 <p>　　实际上两个指针的值相同，则肯定是指向同一个对象（所以对象内容必定相同）。但是两个内容相同的对象，它们的地址可能不一样（比如克隆出来的多个对象之间，地址就不同）。</p>
-<p>##final 常量的问题</p>
-<p>　　针对引用类型变量的 final 修饰符也是很多人搞混淆的地方。实际上 final 只是修饰指针的值（也就是限定指针保存的地址不能变）。至于该指针指向的对象，内容是否能变，那就管不着了。所以，对于如下语句：</p>
+<h2 id="final-常量的问题"><a href="#final-常量的问题" class="headerlink" title="final 常量的问题"></a>final 常量的问题</h2><p>　　针对引用类型变量的 final 修饰符也是很多人搞混淆的地方。实际上 final 只是修饰指针的值（也就是限定指针保存的地址不能变）。至于该指针指向的对象，内容是否能变，那就管不着了。所以，对于如下语句：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> StringBuffer strConst = <span class="keyword">new</span> StringBuffer();</span><br></pre></td></tr></table></figure>
 <p>　　你可以修改它指向的对象的【内容】，比如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strConst.append(<span class="string">"hello world"</span>);</span><br></pre></td></tr></table></figure>
 <p>　　但是【不能】修改它的【值】，比如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strConst = <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
-<p>##传参的问题</p>
-<p>　　引用类型（在函数调用中）的传参问题，是一个相当扯的问题。有些书上说是传值，有些书上说是传引用。搞得 Java 程序员都快成神经分裂了。所以，我们最后来谈一下“引用类型参数传递”的问题。</p>
+<h2 id="传参的问题"><a href="#传参的问题" class="headerlink" title="传参的问题"></a>传参的问题</h2><p>　　引用类型（在函数调用中）的传参问题，是一个相当扯的问题。有些书上说是传值，有些书上说是传引用。搞得 Java 程序员都快成神经分裂了。所以，我们最后来谈一下“引用类型参数传递”的问题。</p>
 <p>　　还是拿刚才的例子，假设现在要把刚才创建的那一坨字符串打印出来，我们会使用如下语句：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(str);</span><br></pre></td></tr></table></figure>
 <p>　　这个语句又是什么意思捏？这时候就两说了。</p>
@@ -528,7 +525,7 @@
   <p><span>本文标题:</span><a href="/2017/12/31/java-attetion-4/">Java新手进阶:细说引用类型</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiming Song 的个人博客">Qiming Song</a></p>
   <p><span>发布时间:</span>2017年12月31日 - 19:12</p>
-  <p><span>最后更新:</span>2017年12月31日 - 19:12</p>
+  <p><span>最后更新:</span>2018年01月01日 - 00:01</p>
   <p><span>原始链接:</span><a href="/2017/12/31/java-attetion-4/" title="Java新手进阶:细说引用类型">https://sqmwin.github.io/2017/12/31/java-attetion-4/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://sqmwin.github.io/2017/12/31/java-attetion-4/"  aria-label="复制成功！"></i></span>
   </p>
@@ -813,7 +810,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java新手进阶-细说引用类型"><span class="nav-number">1.</span> <span class="nav-text">Java新手进阶:细说引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建问题"><span class="nav-number">1.1.</span> <span class="nav-text">创建问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java新手进阶-细说引用类型"><span class="nav-number">1.</span> <span class="nav-text">Java新手进阶:细说引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建问题"><span class="nav-number">1.1.</span> <span class="nav-text">创建问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用对象之间的赋值、判相等"><span class="nav-number">1.2.</span> <span class="nav-text">引用对象之间的赋值、判相等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-常量的问题"><span class="nav-number">1.3.</span> <span class="nav-text">final 常量的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传参的问题"><span class="nav-number">1.4.</span> <span class="nav-text">传参的问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -838,8 +835,8 @@
 
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

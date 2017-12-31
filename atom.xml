@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sqmwin.github.io/"/>
-  <updated>2017-12-31T11:34:29.695Z</updated>
+  <updated>2017-12-31T16:02:31.958Z</updated>
   <id>https://sqmwin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-5/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-5/</id>
     <published>2017-12-31T11:26:46.000Z</published>
-    <updated>2017-12-31T11:34:29.695Z</updated>
+    <updated>2017-12-31T16:02:31.958Z</updated>
     
     <summary type="html">
     
@@ -46,7 +46,7 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-4/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-4/</id>
     <published>2017-12-31T11:24:42.000Z</published>
-    <updated>2017-12-31T11:34:29.695Z</updated>
+    <updated>2017-12-31T16:02:31.958Z</updated>
     
     <summary type="html">
     
@@ -71,14 +71,13 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-3/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-3/</id>
     <published>2017-12-31T11:20:30.000Z</published>
-    <updated>2017-12-31T11:34:29.695Z</updated>
+    <updated>2017-12-31T16:02:31.957Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;本文摘抄自编程随想的博客&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;Java性能优化&quot;&gt;&lt;a href=&quot;#Java性能优化&quot; class=&quot;headerlink&quot; title=&quot;Java性能优化&quot;&gt;&lt;/a&gt;Java性能优化&lt;/h1&gt;&lt;h2 id=&quot;基本类型-vs-引用类型&quot;&gt;&lt;a href=&quot;#基本类型-vs-引用类型&quot; class=&quot;headerlink&quot; title=&quot;基本类型 vs 引用类型&quot;&gt;&lt;/a&gt;基本类型 vs 引用类型&lt;/h2&gt;&lt;p&gt;​    在 Java 性能优化系列中，内存管理是一个要优先考虑的关键因素。而说到内存分配，就必然会涉及到基本类型和引用类型。所以我们今天就先来介绍一下这两种类型在性能方面各自有什么奥妙（关于引用类型的其它奥妙，请看“&lt;a href=&quot;#3. Java新手进阶:细说引用类型&quot;&gt;这里&lt;/a&gt;”）。&lt;/p&gt;
-&lt;p&gt;###名词定义&lt;/p&gt;
-&lt;p&gt;　　先明确一下什么是“基本类型”，什么是“引用类型”。&lt;/p&gt;
+&lt;h3 id=&quot;名词定义&quot;&gt;&lt;a href=&quot;#名词定义&quot; class=&quot;headerlink&quot; title=&quot;名词定义&quot;&gt;&lt;/a&gt;名词定义&lt;/h3&gt;&lt;p&gt;　　先明确一下什么是“基本类型”，什么是“引用类型”。&lt;/p&gt;
     
     </summary>
     
@@ -96,7 +95,7 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-2/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-2/</id>
     <published>2017-12-31T11:19:46.000Z</published>
-    <updated>2017-12-31T11:34:29.695Z</updated>
+    <updated>2017-12-31T16:02:31.957Z</updated>
     
     <summary type="html">
     
@@ -125,7 +124,7 @@
     <link href="https://sqmwin.github.io/2017/12/31/java-attetion-1/"/>
     <id>https://sqmwin.github.io/2017/12/31/java-attetion-1/</id>
     <published>2017-12-31T11:16:33.000Z</published>
-    <updated>2017-12-31T11:34:29.695Z</updated>
+    <updated>2017-12-31T16:02:31.957Z</updated>
     
     <summary type="html">
     
@@ -150,7 +149,7 @@
     <link href="https://sqmwin.github.io/2017/12/31/next-background-image/"/>
     <id>https://sqmwin.github.io/2017/12/31/next-background-image/</id>
     <published>2017-12-31T07:23:46.000Z</published>
-    <updated>2017-12-31T11:34:05.361Z</updated>
+    <updated>2017-12-31T16:02:31.958Z</updated>
     
     <summary type="html">
     
