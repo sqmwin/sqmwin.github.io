@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-30T20:19:44.734Z</updated>
+  <updated>2017-12-31T07:58:05.702Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>next更换背景图片或背景颜色</title>
+    <link href="http://yoursite.com/2017/12/31/next-background-image/"/>
+    <id>http://yoursite.com/2017/12/31/next-background-image/</id>
+    <published>2017-12-31T07:22:46.000Z</published>
+    <updated>2017-12-31T07:58:05.702Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;我使用的的是next的5.1.3版本的主题,想要更换背景颜色或者图片,在网上找了很多方法,有的建议是在&lt;code&gt;custom.styl&lt;/code&gt;中添加一段代码,指定背景图片&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="背景图片" scheme="http://yoursite.com/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Java学习的注意事项</title>
